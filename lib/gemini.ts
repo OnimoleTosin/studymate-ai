@@ -4,7 +4,7 @@ const genAI = new GoogleGenerativeAI(
   process.env.NEXT_PUBLIC_GEMINI_API_KEY || ""
 );
 
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 export async function generateSummary(content: string): Promise<string> {
   const prompt = `You are a helpful study assistant. Summarize the following notes in 3-5 clear, concise bullet points that a student can quickly review before an exam. Be specific and focus on key concepts.\n\nNotes:\n${content}`;
