@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { FaHeart, FaGithub } from 'react-icons/fa';
 import { BookOpen, Sparkles, Brain, BarChart3, ArrowRight, Check } from "lucide-react";
 
 export default function Home() {
@@ -53,8 +54,8 @@ export default function Home() {
         <div className="grid grid-cols-3 gap-4">
           {[
             { num: "50K+", label: "Students using StudyMate" },
-            { num: "94%",  label: "Improved test scores" },
-            { num: "3×",   label: "Faster understanding" },
+            { num: "94%", label: "Improved test scores" },
+            { num: "3×", label: "Faster understanding" },
           ].map((s) => (
             <div key={s.label} className="card text-center">
               <p className="text-3xl font-semibold text-brand-400">{s.num}</p>
@@ -115,9 +116,25 @@ export default function Home() {
         </Link>
       </section>
 
-      <footer className="border-t border-white/10 py-6 text-center text-sm text-white/30">
-        © 2026 StudyMate AI. Built with Next.js, Firebase & Gemini.
+
+      <footer className="border-t border-white/10 py-6 mt-auto">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-sm text-white/40">
+            © 2026 <span className="text-white/60">Onimole</span>
+          </p>
+
+          <p className="text-xs text-white/30 mt-2 flex items-center justify-center gap-1">
+            Built with <FaHeart className="text-white text-xs" /> using Next.js, Firebase & Gemini
+          </p>
+
+          <a href="https://github.com/OnimoleTosin" target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-xs text-white/30 hover:text-white/60 transition-colors mt-3">
+            <FaGithub size={12} /> OnimoleTosin
+          </a>
+
+        </div>
       </footer>
+
     </div>
   );
 }
