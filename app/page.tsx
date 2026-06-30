@@ -120,7 +120,7 @@ export default function Home() {
       <footer className="border-t border-white/10 py-6 mt-auto">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm text-white/40">
-            © 2026 <span className="text-white/60">Onimole</span>
+            © 2026 <span className="text-white/60">ONImole</span>
           </p>
 
           <p className="text-xs text-white/30 mt-2 flex items-center justify-center gap-1">
@@ -129,7 +129,7 @@ export default function Home() {
 
           <a href="https://github.com/OnimoleTosin" target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-xs text-white/30 hover:text-white/60 transition-colors mt-3">
-            <FaGithub size={12} /> OnimoleTosin
+            <FaGithub  size={12} /> OnimoleTosin
           </a>
 
         </div>
