@@ -37,14 +37,14 @@ export default function Home() {
           <span className="text-brand-400">not harder</span>
         </h1>
         <p className="text-lg text-white/60 max-w-xl mx-auto mb-10 leading-relaxed">
-          Upload your notes and let AI generate summaries, quizzes, and personalised explanations — all in seconds.
+          Upload your notes and let AI generate summaries, quizzes, and personalised explanations - all in seconds.
         </p>
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <Link href="/register" className="btn-primary flex items-center gap-2">
             Start for free <ArrowRight size={16} />
           </Link>
           <Link href="/login" className="btn-ghost">
-            I already have an account
+            I already have an account...
           </Link>
         </div>
       </section>
