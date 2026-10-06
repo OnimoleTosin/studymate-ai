@@ -129,7 +129,7 @@ export default function Home() {
 
           <a href="https://github.com/OnimoleTosin" target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-xs text-white/30 hover:text-white/60 transition-colors mt-3">
-            <FaGithub  size={12} /> OnimoleTosin
+            <FaGithub  size={12} /> OnimoleTosin in the building
           </a>
 
         </div>
