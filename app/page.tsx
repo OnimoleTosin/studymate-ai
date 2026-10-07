@@ -124,7 +124,7 @@ export default function Home() {
           </p>
 
           <p className="text-xs text-white/30 mt-2 flex items-center justify-center gap-1">
-            Built with <FaHeart className="text-white text-xs" /> using Next.js, Firebase & Also Gemini
+            Built with <FaHeart className="text-white text-xs" /> using Next.js, Firebase & Also Gemini.
           </p>
 
           <a href="https://github.com/OnimoleTosin" target="_blank" rel="noopener noreferrer"
