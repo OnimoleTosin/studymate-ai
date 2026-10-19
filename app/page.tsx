@@ -109,7 +109,7 @@ export default function Home() {
 
       {/* CTA */}
       <section className="max-w-5xl mx-auto px-6 pb-20 text-center">
-        <h2 className="text-3xl font-semibold mb-4">Ready to transform how you study?</h2>
+        <h2 className="text-3xl font-semibold mb-4"> Are You Ready to transform how you study?</h2>
         <p className="text-white/50 mb-8">Join 50,000+ students already studying smarter with AI.</p>
         <Link href="/register" className="btn-primary inline-flex items-center gap-2">
           Get started for free <ArrowRight size={16} />
