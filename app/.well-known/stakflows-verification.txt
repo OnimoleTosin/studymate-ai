@@ -1,9 +1,0 @@
-import { NextResponse } from 'next/server';
-
-export async function GET() {
-  return new NextResponse('2aa7a1514234e5a8d1804337f03f912', {
-    headers: {
-      'Content-Type': 'text/plain',
-    },
-  });
-}
