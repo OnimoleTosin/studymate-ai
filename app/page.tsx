@@ -13,7 +13,7 @@ export default function Home() {
             <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
               <Brain size={16} />
             </div>
-            <span className="font-semibold text-lg">StudyMate AI</span>
+            <span className="font-semibold text-lg">Oni StudyMate AI</span>
           </div>
           <div className="flex items-center gap-3">
             <Link href="/login" className="text-sm text-white/60 hover:text-white transition-colors">
