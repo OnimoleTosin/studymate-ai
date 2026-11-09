@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://studymateai-git-main-onimole-sodiqs-projects.vercel.app/",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function Home() {
