@@ -19,6 +19,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
     url: "https://studymateai-git-main-onimole-sodiqs-projects.vercel.app/",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "StudyMate AI — Study smarter with AI",
+      },
+    ],
   },
   other: {
     "google-site-verification": "Wn_sPa0vC-aVC62V4-yfZdXzhgWXYCPIi61nx1-aScI",

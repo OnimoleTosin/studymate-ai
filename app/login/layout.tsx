@@ -11,6 +11,14 @@ export const metadata: Metadata = {
     description:
       "Log in to StudyMate AI to continue studying with AI-powered notes, summaries, and quizzes.",
     url: "https://studymateai-git-main-onimole-sodiqs-projects.vercel.app/login",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "StudyMate AI — Study smarter with AI",
+      },
+    ],
   },
 };
 
