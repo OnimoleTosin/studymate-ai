@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FaHeart, FaGithub } from 'react-icons/fa';
-import { BookOpen, Sparkles, Brain, BarChart3, ArrowRight, Check } f
+import { BookOpen, Sparkles, Brain, BarChart3, ArrowRight, Check } from "lucide-react";
 
 export const metadata: Metadata = {
   alternates: {
