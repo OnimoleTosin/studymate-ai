@@ -5,7 +5,7 @@ import { BookOpen, Sparkles, Brain, BarChart3, ArrowRight, Check } from "lucide-
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: "https://www.projectrewardpromo.site/",
+    canonical: "https://studymateai-git-main-onimole-sodiqs-projects.vercel.app/",
   },
 };
 
