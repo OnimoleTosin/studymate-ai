@@ -4,6 +4,10 @@ export const metadata: Metadata = {
   title: "Sign up | StudyMate AI",
   description:
     "Create a StudyMate AI account to turn your notes into personalized summaries, quizzes, and explanations.",
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
     canonical:
       "https://studymateai-git-main-onimole-sodiqs-projects.vercel.app/register",
