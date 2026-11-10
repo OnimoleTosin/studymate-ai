@@ -59,17 +59,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="max-w-5xl mx-auto px-6 pb-16">
-        <div className="grid grid-cols-3 gap-4">
+      {/* How it works */}
+      <section className="max-w-5xl mx-auto px-6 pb-20">
+        <p className="text-xs font-medium tracking-widest text-brand-400 uppercase mb-2 text-center">
+          How it works
+        </p>
+        <h2 className="text-3xl font-semibold text-center mb-4">
+          Turn class notes into an active study session
+        </h2>
+        <p className="text-white/50 max-w-2xl mx-auto text-center leading-relaxed mb-10">
+          StudyMate AI gives you a simple way to move from reading your notes
+          to working with the ideas in them. Start with the material you already
+          have, then choose a study activity that fits what you need to review.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {[
-            { num: "50K+", label: "Students using StudyMate" },
-            { num: "94%", label: "Improved test scores" },
-            { num: "3×", label: "Faster understanding" },
-          ].map((s) => (
-            <div key={s.label} className="card text-center">
-              <p className="text-3xl font-semibold text-brand-400">{s.num}</p>
-              <p className="text-sm text-white/50 mt-1">{s.label}</p>
+            {
+              step: "01",
+              title: "Add your notes",
+              desc: "Create a title for a topic or class, then paste your notes into StudyMate AI. Keeping each set focused on one subject can make its summaries and practice questions easier to review.",
+            },
+            {
+              step: "02",
+              title: "Choose how to study",
+              desc: "Ask Gemini AI to make a concise, bullet-point summary, create five multiple-choice questions, or explain the material at a beginner, high-school, or university level.",
+            },
+            {
+              step: "03",
+              title: "Review and revisit",
+              desc: "Read the generated response alongside your original notes. Saved notes, summaries, and quizzes are available from your dashboard so you can return to your study materials later.",
+            },
+          ].map((item) => (
+            <div key={item.step} className="card">
+              <p className="text-sm font-semibold text-brand-400 mb-3">{item.step}</p>
+              <h3 className="font-medium text-lg mb-2">{item.title}</h3>
+              <p className="text-sm text-white/50 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -97,6 +121,55 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Study guidance */}
+      <section className="max-w-5xl mx-auto px-6 pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          <div>
+            <p className="text-xs font-medium tracking-widest text-brand-400 uppercase mb-2">
+              Make your review count
+            </p>
+            <h2 className="text-3xl font-semibold mb-4">
+              More than rereading the same page
+            </h2>
+            <p className="text-white/60 leading-relaxed mb-4">
+              Rereading can help you become familiar with a topic, but it does
+              not always show which ideas you can explain or recall. StudyMate
+              AI helps you approach your own notes in different ways: use a
+              summary to revisit key points, try a quiz to check what you
+              remember, or request a simpler explanation when a concept feels
+              difficult.
+            </p>
+            <p className="text-white/60 leading-relaxed">
+              These tools are designed to support your study routine, not
+              replace your course materials or your own judgement. AI-generated
+              summaries and answers can miss context, so compare them with your
+              original notes and check important details against trusted class
+              sources.
+            </p>
+          </div>
+          <div className="card">
+            <h3 className="font-semibold text-lg mb-5">Ways to use StudyMate AI</h3>
+            <ul className="space-y-4 text-sm text-white/60 leading-relaxed">
+              <li>
+                <span className="text-white font-medium">Before a test:</span>{" "}
+                make a short summary of a topic, then use a quiz to find points
+                that deserve another look.
+              </li>
+              <li>
+                <span className="text-white font-medium">After class:</span>{" "}
+                save your lecture notes with a clear title and ask for an
+                explanation of unfamiliar ideas.
+              </li>
+              <li>
+                <span className="text-white font-medium">When reviewing:</span>{" "}
+                choose the explanation level that feels approachable, then
+                return to the original material for the full context.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Teach Me feature callout */}
       <section className="max-w-5xl mx-auto px-6 pb-20">
         <div className="bg-brand-600/10 border border-brand-600/20 rounded-2xl p-8 md:p-12 text-center">
@@ -117,10 +190,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="max-w-3xl mx-auto px-6 pb-20">
+        <p className="text-xs font-medium tracking-widest text-brand-400 uppercase mb-2 text-center">
+          Frequently asked questions
+        </p>
+        <h2 className="text-3xl font-semibold text-center mb-8">
+          Getting started with StudyMate AI
+        </h2>
+        <div className="space-y-4">
+          <div className="card">
+            <h3 className="font-medium mb-2">What can I do with my notes?</h3>
+            <p className="text-sm text-white/50 leading-relaxed">
+              Add a title and paste your study material into a note. From there,
+              you can request a concise summary, generate five multiple-choice
+              quiz questions, or ask for an explanation at one of three levels.
+              Your saved notes and generated summaries and quizzes appear in
+              your dashboard.
+            </p>
+          </div>
+          <div className="card">
+            <h3 className="font-medium mb-2">Can I choose how a topic is explained?</h3>
+            <p className="text-sm text-white/50 leading-relaxed">
+              Yes. Choose a beginner explanation, a high-school-level
+              explanation, or a university-level explanation. Changing the
+              level adjusts the language and depth used to explain the notes;
+              it does not change your original material.
+            </p>
+          </div>
+          <div className="card">
+            <h3 className="font-medium mb-2">Does StudyMate AI replace my textbooks or teacher?</h3>
+            <p className="text-sm text-white/50 leading-relaxed">
+              No. StudyMate AI is a study aid that generates responses from the
+              notes you provide. Use it to organize review and practise
+              recalling ideas, but verify important facts with your course
+              materials, instructor, or other trusted sources.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="max-w-5xl mx-auto px-6 pb-20 text-center">
         <h2 className="text-3xl font-semibold mb-4">Ready to transform how you study?</h2>
-        <p className="text-white/50 mb-8">Join 50,000+ students already studying smarter with AI.</p>
+        <p className="text-white/50 mb-8">
+          Create an account, add a set of notes, and choose a way to review.
+        </p>
         <Link href="/register" className="btn-primary inline-flex items-center gap-2">
           Get started for free <ArrowRight size={16} />
         </Link>
