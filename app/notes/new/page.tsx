@@ -32,18 +32,18 @@ export default function NewNotePage() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-white">
-      <nav className="border-b border-white/10 px-6 py-4">
+      <nav className="border-b border-white/10 px-4 py-4 sm:px-6">
         <div className="max-w-3xl mx-auto flex items-center justify-between">
           <Link href="/dashboard" className="flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
             <ArrowLeft size={15} /> Back to dashboard
           </Link>
-          <button onClick={handleSave} disabled={saving} className="btn-primary flex items-center gap-2 text-sm py-2">
+          <button onClick={handleSave} disabled={saving} className="btn-primary flex shrink-0 items-center gap-2 text-xs sm:text-sm py-2 px-3 sm:px-5">
             <Save size={14} /> {saving ? "Saving…" : "Save note"}
           </button>
         </div>
       </nav>
 
-      <main className="max-w-3xl mx-auto px-6 py-10">
+      <main className="max-w-3xl mx-auto px-4 py-8 sm:px-6 sm:py-10">
         <h1 className="text-2xl font-semibold mb-8">New note</h1>
 
         <div className="space-y-5">

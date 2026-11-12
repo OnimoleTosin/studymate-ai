@@ -69,7 +69,7 @@ export default function NotePage() {
 
   return (
     <div className="min-h-screen bg-gray-950 text-white">
-      <nav className="border-b border-white/10 px-6 py-4">
+      <nav className="border-b border-white/10 px-4 py-4 sm:px-6">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <Link href="/dashboard" className="flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
             <ArrowLeft size={15} /> Dashboard
@@ -78,8 +78,8 @@ export default function NotePage() {
         </div>
       </nav>
 
-      <main className="max-w-4xl mx-auto px-6 py-10">
-        <h1 className="text-2xl font-semibold mb-2">{note.title}</h1>
+      <main className="max-w-4xl mx-auto px-4 py-8 sm:px-6 sm:py-10">
+        <h1 className="break-words text-xl sm:text-2xl font-semibold mb-2">{note.title}</h1>
         <p className="text-sm text-white/40 mb-8">
           {note.content.split(" ").length} words
         </p>
@@ -94,7 +94,7 @@ export default function NotePage() {
             {showNote ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
           </button>
           {showNote && (
-            <p className="mt-4 text-white/60 text-sm leading-relaxed whitespace-pre-wrap">
+            <p className="mt-4 break-words text-white/60 text-sm leading-relaxed whitespace-pre-wrap">
               {note.content}
             </p>
           )}
@@ -183,7 +183,7 @@ export default function NotePage() {
                 Saved to history
               </span>
             </div>
-            <div className="text-sm text-white/70 leading-relaxed whitespace-pre-wrap">
+            <div className="break-words text-sm text-white/70 leading-relaxed whitespace-pre-wrap">
               {result.content}
             </div>
           </div>

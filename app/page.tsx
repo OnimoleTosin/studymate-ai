@@ -17,19 +17,19 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       {/* Nav */}
-      <nav className="border-b border-white/10 px-6 py-4">
+      <nav className="border-b border-white/10 px-4 py-4 sm:px-6">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
               <Brain size={16} />
             </div>
-            <span className="font-semibold text-lg">Oni StudyMate AI</span>
+            <span className="font-semibold text-sm sm:text-lg">Oni StudyMate AI</span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <Link href="/login" className="text-sm text-white/60 hover:text-white transition-colors">
               Log in
             </Link>
-            <Link href="/register" className="btn-primary text-sm py-2 px-4">
+            <Link href="/register" className="btn-primary text-xs sm:text-sm py-2 px-3 sm:px-4">
               Get started
             </Link>
           </div>
@@ -37,19 +37,19 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="max-w-5xl mx-auto px-6 pt-24 pb-16 text-center">
+      <section className="max-w-5xl mx-auto px-4 pt-16 pb-12 text-center sm:px-6 sm:pt-24 sm:pb-16">
         <div className="inline-flex items-center gap-2 bg-brand-600/10 border border-brand-600/30 rounded-full px-4 py-1.5 text-brand-200 text-sm mb-8">
           <Sparkles size={14} />
           Powered by Gemini AI
         </div>
-        <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-6">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight mb-6">
           Study smarter,<br />
           <span className="text-brand-400">not harder</span>
         </h1>
         <p className="text-lg text-white/60 max-w-xl mx-auto mb-10 leading-relaxed">
           Upload your notes and let AI generate summaries, quizzes, and personalised explanations - all in seconds.
         </p>
-        <div className="flex items-center justify-center gap-4 flex-wrap">
+        <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
           <Link href="/register" className="btn-primary flex items-center gap-2">
             Start for free <ArrowRight size={16} />
           </Link>
@@ -60,11 +60,11 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section className="max-w-5xl mx-auto px-6 pb-20">
+      <section className="max-w-5xl mx-auto px-4 pb-14 sm:px-6 sm:pb-20">
         <p className="text-xs font-medium tracking-widest text-brand-400 uppercase mb-2 text-center">
           How it works
         </p>
-        <h2 className="text-3xl font-semibold text-center mb-4">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-4">
           Turn class notes into an active study session
         </h2>
         <p className="text-white/50 max-w-2xl mx-auto text-center leading-relaxed mb-10">
@@ -100,9 +100,9 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="max-w-5xl mx-auto px-6 pb-20">
+      <section className="max-w-5xl mx-auto px-4 pb-14 sm:px-6 sm:pb-20">
         <p className="text-xs font-medium tracking-widest text-brand-400 uppercase mb-2 text-center">Features</p>
-        <h2 className="text-3xl font-semibold text-center mb-10">Everything you need to excel</h2>
+        <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-10">Everything you need to excel</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { icon: <BookOpen size={20} />, title: "Smart notes", desc: "Paste your notes and have them organised instantly." },
@@ -122,13 +122,13 @@ export default function Home() {
       </section>
 
       {/* Study guidance */}
-      <section className="max-w-5xl mx-auto px-6 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      <section className="max-w-5xl mx-auto px-4 pb-14 sm:px-6 sm:pb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-start">
           <div>
             <p className="text-xs font-medium tracking-widest text-brand-400 uppercase mb-2">
               Make your review count
             </p>
-            <h2 className="text-3xl font-semibold mb-4">
+            <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
               More than rereading the same page
             </h2>
             <p className="text-white/60 leading-relaxed mb-4">
@@ -171,12 +171,12 @@ export default function Home() {
       </section>
 
       {/* Teach Me feature callout */}
-      <section className="max-w-5xl mx-auto px-6 pb-20">
-        <div className="bg-brand-600/10 border border-brand-600/20 rounded-2xl p-8 md:p-12 text-center">
+      <section className="max-w-5xl mx-auto px-4 pb-14 sm:px-6 sm:pb-20">
+        <div className="bg-brand-600/10 border border-brand-600/20 rounded-2xl p-5 sm:p-8 md:p-12 text-center">
           <div className="inline-flex items-center gap-2 bg-brand-600/20 rounded-full px-3 py-1 text-brand-300 text-xs font-medium mb-4">
             ✦ Signature feature
           </div>
-          <h2 className="text-3xl font-semibold mb-4">The "Teach Me" button</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-4">The "Teach Me" button</h2>
           <p className="text-white/60 max-w-lg mx-auto mb-8">
             One button. Three levels. AI explains your notes exactly the way you need — whether you are a complete beginner or a university student.
           </p>
@@ -191,11 +191,11 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="max-w-3xl mx-auto px-6 pb-20">
+      <section className="max-w-3xl mx-auto px-4 pb-14 sm:px-6 sm:pb-20">
         <p className="text-xs font-medium tracking-widest text-brand-400 uppercase mb-2 text-center">
           Frequently asked questions
         </p>
-        <h2 className="text-3xl font-semibold text-center mb-8">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-8">
           Getting started with StudyMate AI
         </h2>
         <div className="space-y-4">
@@ -231,8 +231,8 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-5xl mx-auto px-6 pb-20 text-center">
-        <h2 className="text-3xl font-semibold mb-4">Ready to transform how you study?</h2>
+      <section className="max-w-5xl mx-auto px-4 pb-14 sm:px-6 sm:pb-20 text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Ready to transform how you study?</h2>
         <p className="text-white/50 mb-8">
           Create an account, add a set of notes, and choose a way to review.
         </p>

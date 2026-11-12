@@ -54,7 +54,7 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       {/* Navbar */}
-      <nav className="border-b border-white/10 px-6 py-4">
+      <nav className="border-b border-white/10 px-4 py-4 sm:px-6">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
@@ -68,11 +68,11 @@ export default function DashboardPage() {
         </div>
       </nav>
 
-      <main className="max-w-5xl mx-auto px-6 py-10">
+      <main className="max-w-5xl mx-auto px-4 py-8 sm:px-6 sm:py-10">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between mb-8">
           <div>
-            <h1 className="text-2xl font-semibold">Welcome back, {firstName} 👋</h1>
+            <h1 className="text-xl sm:text-2xl font-semibold break-words">Welcome back, {firstName} 👋</h1>
             <p className="text-white/50 text-sm mt-1">Ready to study smarter today?</p>
           </div>
           <Link href="/notes/new" className="btn-primary flex items-center gap-2">
@@ -81,13 +81,13 @@ export default function DashboardPage() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-3 gap-4 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-10">
           {[
             { icon: <FileText size={18} />, label: "Notes", value: notes.length },
             { icon: <Sparkles size={18} />, label: "Summaries", value: summaries.length },
             { icon: <BookOpen size={18} />, label: "Quizzes", value: quizzes.length },
           ].map((s) => (
-            <div key={s.label} className="card flex items-center gap-4">
+            <div key={s.label} className="card flex items-center gap-4 p-4 sm:p-5">
               <div className="w-10 h-10 bg-brand-600/20 rounded-lg flex items-center justify-center text-brand-400">
                 {s.icon}
               </div>
@@ -127,12 +127,12 @@ export default function DashboardPage() {
               {notes.map((note) => (
                 <div key={note.id} className="card group flex flex-col gap-3">
                   <div className="flex items-start justify-between">
-                    <Link href={`/notes/${note.id}`} className="font-medium hover:text-brand-400 transition-colors line-clamp-2">
+                    <Link href={`/notes/${note.id}`} className="min-w-0 break-words font-medium hover:text-brand-400 transition-colors line-clamp-2">
                       {note.title}
                     </Link>
                     <button
                       onClick={() => handleDelete(note.id)}
-                      className="opacity-0 group-hover:opacity-100 text-white/30 hover:text-red-400 transition-all ml-2 shrink-0"
+                      className="opacity-100 md:opacity-0 md:group-hover:opacity-100 text-white/30 hover:text-red-400 transition-all ml-2 -mr-2 p-2 shrink-0"
                     >
                       <Trash2 size={15} />
                     </button>
@@ -156,19 +156,19 @@ export default function DashboardPage() {
             <h2 className="font-semibold text-lg mb-4">Past sessions</h2>
             <div className="space-y-2">
               {summaries.slice(0, 5).map((s) => (
-                <div key={s.id} className="card flex items-center gap-3 py-3">
+                <div key={s.id} className="card flex flex-wrap items-center gap-3 py-3">
                   <Sparkles size={16} className="text-brand-400 shrink-0" />
-                  <span className="text-sm">{s.noteTitle} — Summary</span>
-                  <span className="ml-auto text-xs text-white/30">
+                  <span className="min-w-0 flex-1 break-words text-sm">{s.noteTitle} — Summary</span>
+                  <span className="ml-auto shrink-0 text-xs text-white/30">
                     {s.createdAt ? formatDistanceToNow(s.createdAt.toDate(), { addSuffix: true }) : ""}
                   </span>
                 </div>
               ))}
               {quizzes.slice(0, 5).map((q) => (
-                <div key={q.id} className="card flex items-center gap-3 py-3">
+                <div key={q.id} className="card flex flex-wrap items-center gap-3 py-3">
                   <BookOpen size={16} className="text-brand-400 shrink-0" />
-                  <span className="text-sm">{q.noteTitle} — Quiz</span>
-                  <span className="ml-auto text-xs text-white/30">
+                  <span className="min-w-0 flex-1 break-words text-sm">{q.noteTitle} — Quiz</span>
+                  <span className="ml-auto shrink-0 text-xs text-white/30">
                     {q.createdAt ? formatDistanceToNow(q.createdAt.toDate(), { addSuffix: true }) : ""}
                   </span>
                 </div>
