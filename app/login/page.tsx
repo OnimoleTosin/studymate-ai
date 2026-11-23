@@ -29,17 +29,18 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 flex items-center justify-center px-4 py-8">
-      <div className="w-full max-w-md">
+    <div className="page-shell flex items-center justify-center px-4 py-8">
+      <div className="relative z-[1] w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="w-12 h-12 bg-brand-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <Brain size={24} />
-          </div>
-          <h1 className="text-2xl font-semibold">Welcome back</h1>
-          <p className="text-white/50 text-sm mt-1">Log in to continue studying</p>
+          <Link href="/" className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-500 shadow-[0_12px_35px_-12px_rgba(139,92,246,.9)]">
+            <Brain size={23} />
+          </Link>
+          <p className="eyebrow mb-2">StudyMate AI</p>
+          <h1 className="text-3xl font-semibold tracking-tight">Welcome back</h1>
+          <p className="mt-2 text-sm text-zinc-400">Log in to continue your study session.</p>
         </div>
 
-        <div className="card">
+        <div className="surface p-5 sm:p-6">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="text-sm text-white/60 block mb-1.5">Email</label>

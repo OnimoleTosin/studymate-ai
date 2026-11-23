@@ -31,24 +31,25 @@ export default function NewNotePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
-      <nav className="border-b border-white/10 px-4 py-4 sm:px-6">
-        <div className="max-w-3xl mx-auto flex items-center justify-between">
-          <Link href="/dashboard" className="flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
+    <div className="page-shell">
+      <nav className="relative z-10 border-b border-white/[0.07] bg-[#09090b]/80 px-4 backdrop-blur-xl sm:px-6">
+        <div className="mx-auto flex h-16 max-w-3xl items-center justify-between">
+          <Link href="/dashboard" className="flex items-center gap-2 text-sm text-zinc-400 transition hover:text-white">
             <ArrowLeft size={15} /> Back to dashboard
           </Link>
-          <button onClick={handleSave} disabled={saving} className="btn-primary flex shrink-0 items-center gap-2 text-xs sm:text-sm py-2 px-3 sm:px-5">
+          <button onClick={handleSave} disabled={saving} className="btn-primary shrink-0 py-2 px-3 text-xs sm:px-5 sm:text-sm">
             <Save size={14} /> {saving ? "Saving…" : "Save note"}
           </button>
         </div>
       </nav>
 
-      <main className="max-w-3xl mx-auto px-4 py-8 sm:px-6 sm:py-10">
-        <h1 className="text-2xl font-semibold mb-8">New note</h1>
+      <main className="relative z-[1] mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-10">
+        <p className="eyebrow mb-2">Create</p>
+        <h1 className="mb-7 text-3xl font-semibold tracking-tight">New study note</h1>
 
-        <div className="space-y-5">
+        <div className="surface space-y-5 p-5 sm:p-6">
           <div>
-            <label className="text-sm text-white/60 block mb-1.5">Title</label>
+            <label className="mb-2 block text-sm font-medium text-zinc-300">Title</label>
             <input
               type="text"
               className="input text-lg font-medium"
@@ -59,7 +60,7 @@ export default function NewNotePage() {
           </div>
 
           <div>
-            <label className="text-sm text-white/60 block mb-1.5">Notes</label>
+            <label className="mb-2 block text-sm font-medium text-zinc-300">Notes</label>
             <textarea
               className="input min-h-[320px] resize-y leading-relaxed"
               placeholder="Paste your notes here… The more detail you include, the better the AI can summarise and quiz you."

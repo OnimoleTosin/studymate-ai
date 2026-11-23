@@ -4,22 +4,42 @@
 
 @layer base {
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
-    @apply bg-gray-950 text-white antialiased;
+    @apply bg-[#09090b] text-white antialiased selection:bg-violet-500/30;
+  }
+  button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
+  option { color: #18181b; background: white; }
+  :focus-visible {
+    @apply outline-none ring-2 ring-violet-400 ring-offset-2 ring-offset-[#09090b];
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-brand-600 hover:bg-brand-800 text-white font-medium px-5 py-2.5 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-violet-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_30px_-12px_rgba(139,92,246,.75)] transition duration-200 hover:-translate-y-0.5 hover:bg-violet-400 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0;
   }
   .btn-ghost {
-    @apply bg-white/5 hover:bg-white/10 text-white font-medium px-5 py-2.5 rounded-lg transition-colors border border-white/10;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-semibold text-white transition duration-200 hover:border-white/20 hover:bg-white/[0.08];
   }
   .input {
-    @apply w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-brand-600 transition;
+    @apply w-full rounded-xl border border-white/10 bg-white/[0.045] px-4 py-3 text-sm text-white placeholder:text-zinc-600 transition hover:border-white/15 focus:border-violet-400/60 focus:outline-none focus:ring-4 focus:ring-violet-500/10;
   }
   .card {
-    @apply bg-white/5 border border-white/10 rounded-xl p-5;
+    @apply rounded-2xl border border-white/[0.08] bg-white/[0.04] p-5 shadow-[0_20px_60px_-40px_rgba(0,0,0,.8)] backdrop-blur-sm;
+  }
+  .surface {
+    @apply rounded-2xl border border-white/[0.08] bg-[#111116];
+  }
+  .page-shell {
+    @apply relative min-h-screen overflow-hidden bg-[#09090b] text-white;
+  }
+  .page-shell::before {
+    content: "";
+    @apply pointer-events-none absolute inset-x-0 top-0 h-[520px];
+    background: radial-gradient(circle at 50% -20%, rgba(124, 58, 237, .20), transparent 58%);
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.16em] text-violet-300;
   }
 }

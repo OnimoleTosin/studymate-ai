@@ -60,18 +60,18 @@ export default function NotePage() {
   }
 
   if (loading) return (
-    <div className="min-h-screen bg-gray-950 flex items-center justify-center">
-      <Loader2 size={24} className="animate-spin text-brand-400" />
+    <div className="page-shell flex items-center justify-center">
+      <Loader2 size={24} className="animate-spin text-violet-400" />
     </div>
   );
 
   if (!note) return null;
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
-      <nav className="border-b border-white/10 px-4 py-4 sm:px-6">
-        <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <Link href="/dashboard" className="flex items-center gap-2 text-sm text-white/50 hover:text-white transition-colors">
+    <div className="page-shell">
+      <nav className="relative z-10 border-b border-white/[0.07] bg-[#09090b]/80 px-4 backdrop-blur-xl sm:px-6">
+        <div className="mx-auto flex h-16 max-w-5xl items-center justify-between">
+          <Link href="/dashboard" className="flex items-center gap-2 text-sm text-zinc-400 transition hover:text-white">
             <ArrowLeft size={15} /> Dashboard
           </Link>
           <span className="text-sm text-white/30 hidden md:block">StudyMate AI</span>
